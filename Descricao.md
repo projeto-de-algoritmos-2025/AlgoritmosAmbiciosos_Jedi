@@ -23,7 +23,7 @@
 
 ## Missões
 
-### MISSÃO 1: "A Rota do Contrabando" 
+## MISSÃO 1: "A Rota do Contrabando" 
 
  - **Algoritmo Ganancioso**: Knapsack
  - **Contexto:** Nossas células em setores remotos precisam desesperadamente de suprimentos – de medicamentos a componentes tecnológicos. Sua primeira tarefa é otimizar o carregamento de um transporte clandestino e garantir que nossos contatos sejam pagos discretamente, sem levantar suspeitas imperiais.
