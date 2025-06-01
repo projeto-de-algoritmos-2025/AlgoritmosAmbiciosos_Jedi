@@ -9,6 +9,8 @@ try:
     from missoes.missao3 import Missao3
     from missoes.missao4 import Missao4
     from missoes.missao5 import Missao5 
+    from missoes.missao6 import Missao6
+    from missoes.missao7 import Missao7
     
     from missoes.minigame_bfs_extração import MinigameBFSExtracao 
     from missoes.minigame_rpg_kruskal import MinigameKruskalContraAtaque 
@@ -296,6 +298,45 @@ class GameManager:
                 messagebox.showerror("Erro Crítico de Inicialização", "A classe Missao5 não foi carregada.")
                 self.root.quit()
 
+        elif self.game_state == "MISSION_5_SUCCESS_FULCRUM_A":
+            self.current_mission_obj = None
+            fulcrum_m5_praise = ("Fulcrum: \"Comandante, seu gerenciamento de recursos no Setor Bryx foi exemplar. Conseguimos manter a vigilância necessária com um número mínimo de esquadrões, otimizando nossos ativos de forma crucial.\"")
+            self._display_text_screen("Vigilância Otimizada no Setor Bryx", [fulcrum_m5_praise], "Fico feliz em ajudar, Fulcrum. Qual a próxima prioridade?", "MISSION_5_SUCCESS_FULCRUM_B")
+
+        elif self.game_state == "MISSION_5_SUCCESS_FULCRUM_B":
+            fulcrum_m5_next_task = ("Fulcrum: \"Sua capacidade de otimizar recursos será novamente testada. Recebemos informações sobre uma rota de suprimentos imperial crítica que passa por um setor com poucos postos de reabastecimento seguros para nós. Precisamos interceptar esse carregamento, mas o planejamento da rota de aproximação exigirá um gerenciamento cuidadoso do combustível.\"" )
+            self._display_text_screen("Nova Tarefa: Interceptação e Abastecimento Crítico", [fulcrum_m5_next_task], "Entendido. Prepare os detalhes da missão de interceptação.", "START_MISSION_6", button_style="Accent.TButton")
+
+       
+        elif self.game_state == "START_MISSION_6":
+            self.current_mission_obj = None 
+            if 'Missao6' in globals(): 
+                self.current_mission_obj = Missao6(self.root, self, self.content_frame)
+                self.current_mission_obj.iniciar_missao_contexto()
+            else:
+                messagebox.showerror("Erro Crítico de Inicialização", "A classe Missao6 não foi carregada.")
+                self.root.quit()
+        elif self.game_state == "MISSION_6_SUCCESS_FULCRUM_A":
+            self.current_mission_obj = None
+            fulcrum_m6_praise = ("Fulcrum: \"Comandante, a eficiência do seu planejamento de reabastecimento foi notável. Evitamos patrulhas imperiais e alcançamos o destino com recursos mínimos.\"")
+            self._display_text_screen("Interceptação e Abastecimento Crítico", [fulcrum_m6_praise], "Fico feliz em ajudar, Fulcrum. Qual a próxima missão?", "MISSION_6_SUCCESS_FULCRUM_B")
+
+        elif self.game_state == "MISSION_6_SUCCESS_FULCRUM_B":
+            fulcrum_m6_next_task = ("Fulcrum: \"Sua capacidade de decodificação será testada. \n\n"
+        "Precisamos enviar uma mensagem vital para a base da Aliança, mas os canais imperiais estão sendo fortemente monitorados. "
+        "A única forma segura de transmissão é através de codificação avançada que reduza o tamanho da mensagem — e dificulte a interceptação. ")
+            self._display_text_screen("Nova Tarefa: Codificar mensagem", [fulcrum_m6_next_task], "Entendido. Prepare os detalhes da missão de comunicação.", "START_MISSION_7", button_style="Accent.TButton")
+      
+        
+        elif self.game_state == "START_MISSION_7":
+            self.current_mission_obj = None 
+            if 'Missao7' in globals(): 
+                self.current_mission_obj = Missao7(self.root, self, self.content_frame)
+                self.current_mission_obj.iniciar_missao_contexto()
+            else:
+                messagebox.showerror("Erro Crítico de Inicialização", "A classe Missao7 não foi carregada.")
+                self.root.quit()
+
         elif self.game_state == "ALL_MISSIONS_COMPLETED":
              self.current_mission_obj = None
              titulo_final = "Uma Nova Esperança Desperta"
@@ -422,7 +463,11 @@ class GameManager:
              self.set_game_state("MISSION_3_SUCCESS_FULCRUM_A")
         elif mission_id == "Missao4": 
              self.set_game_state("MISSION_4_SUCCESS_FULCRUM_A")
-        elif mission_id == "Missao5": 
+        elif mission_id == "Missao5":
+            self.set_game_state("MISSION_5_SUCCESS_FULCRUM_A") 
+        elif mission_id == "Missao6":
+            self.set_game_state("MISSION_6_SUCCESS_FULCRUM_A") 
+        elif mission_id == "Missao7": 
              self.set_game_state("ALL_MISSIONS_COMPLETED") 
 
     def mission_failed_options(self, mission_obj_que_falhou, failure_message_1, failure_message_2_creative):
