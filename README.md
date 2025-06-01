@@ -92,31 +92,31 @@ Você saberá que o ambiente virtual está ativo porque o nome dele aparecerá n
 #### 3. Estrutura de Pastas Esperada
 Para que o jogo funcione corretamente, especialmente o carregamento de imagens e módulos, ele espera a seguinte estrutura de pastas dentro do diretório principal do projeto:
 
-NOME_DO_REPOSITORIO/
-├── main.py                     # Arquivo principal para executar o jogo
-├── algoritmos/                 # Pasta para os algoritmos
-│   ├── __init__.py
-│   ├── coin_changing_guloso.py
-│   ├── grafo_bfs.py
-│   ├── interval_partitioning_guloso.py
-│   ├── interval_scheduling_guloso.py
-│   ├── knapsack_fracionario.py
-│   ├── scheduling_minimize_lateness.py
-│   └── union_find.py
-├── missoes/                    # Pasta para as missões e minigames
-│   ├── __init__.py
-│   ├── missao1.py
-│   ├── missao2.py
-│   ├── missao3.py
-│   ├── missao4.py
-│   ├── missao5.py
-│   ├── minigame_bfs_extração.py  # Verifique o nome exato do arquivo
-│   └── minigame_rpg_kruskal.py # Verifique o nome exato do arquivo
-├── assets/                     # Pasta para recursos gráficos e sonoros
-│   └── images/
-│       └── Alianca_Rebelde.png # Imagem do símbolo da Aliança
-│       └── fundo_espacial.png  # Exemplo de imagem de fundo para a janela
-└── README.md                   # Este arquivo de manual
+      NOME_DO_REPOSITORIO/
+      ├── main.py                     # Arquivo principal para executar o jogo
+      ├── algoritmos/                 # Pasta para os algoritmos
+      │   ├── __init__.py
+      │   ├── coin_changing_guloso.py
+      │   ├── grafo_bfs.py
+      │   ├── interval_partitioning_guloso.py
+      │   ├── interval_scheduling_guloso.py
+      │   ├── knapsack_fracionario.py
+      │   ├── scheduling_minimize_lateness.py
+      │   └── union_find.py
+      ├── missoes/                    # Pasta para as missões e minigames
+      │   ├── __init__.py
+      │   ├── missao1.py
+      │   ├── missao2.py
+      │   ├── missao3.py
+      │   ├── missao4.py
+      │   ├── missao5.py
+      │   ├── minigame_bfs_extração.py  # Verifique o nome exato do arquivo
+      │   └── minigame_rpg_kruskal.py # Verifique o nome exato do arquivo
+      ├── assets/                     # Pasta para recursos gráficos e sonoros
+      │   └── images/
+      │       └── Alianca_Rebelde.png # Imagem do símbolo da Aliança
+      │       └── fundo_espacial.png  # Exemplo de imagem de fundo para a janela
+      └── README.md                   # Este arquivo de manual
 
 
 #### 4. Como Rodar o Jogo
