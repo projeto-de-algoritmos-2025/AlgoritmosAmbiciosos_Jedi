@@ -1,4 +1,4 @@
-# AlgoritmosAmbiciosos_Jedi
+# Greed_Jedi
 **Número da Lista**: 3
 **Conteúdo da Disciplina**: Algoritmos Ambiciosos <br>
 
