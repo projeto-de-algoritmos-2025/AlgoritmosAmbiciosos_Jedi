@@ -1,4 +1,14 @@
 <h2 align="center">Star Wars: Aliança Rebelde - Operações Críticas</h2>
+
+<div align="center">
+    Figura 1: Aliança Rebelde
+    <br>
+    <img src="https://raw.githubusercontent.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/refs/heads/main/Alianca_Rebelde/alianca_simbolo.png" width="200">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
 <h2 align="center">Algoritmos Ambiciosos podem salvar a rebelião!</h2>
 
 "Aliança Rebelde - Operações Críticas" é um jogo de estratégia e puzzle narrativo, onde o jogador assume o papel de um(a) Coordenador(a) de Operações da Aliança Rebelde. Com uma atmosfera inspirada na seriedade e tensão de narrativas como "Andor" e "Rogue One", o jogo desafia o jogador a aplicar algoritmos gananciosos para resolver problemas complexos em diversas missões. Cada nível é uma etapa crucial na campanha contra o Império, exigindo lógica e precisão.
