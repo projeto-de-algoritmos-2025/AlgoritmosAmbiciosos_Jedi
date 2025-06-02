@@ -40,7 +40,7 @@ Para mais detalhes sobre a história, os personagens, os algoritmos abordados e 
 Para ter acesso aos códigos clique em [Aliança Rebelde](#https://github.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/tree/main/Alianca_Rebelde)
 
 ## Link do vídeo
-[Vídeo de apresentaçõ do projeto Aliança rebelde](https://www.youtube.com/watch?v=nYKu1BN_hIM)
+[Vídeo de apresentação do projeto Aliança rebelde](https://www.youtube.com/watch?v=nYKu1BN_hIM)
 
 ## Screenshots
 
