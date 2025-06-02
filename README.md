@@ -29,9 +29,16 @@ Para mais detalhes sobre a história, os personagens, os algoritmos abordados e 
 
 ### Missões do Jogo
 
-
+- Missão 1: A Rota do Contrabando - Knapsack fracionado
+- Missão 2: Pagamento ao Informante - Coin Changing 
+- Missão 3: Sincronia Secreta - Interval Scheduling 
+- Missão 4: Contagem Regressiva em Kessel - Scheduling to Minimize Lateness
+- Missão 5: Olhos no Setor Bryx - Interval Partitioning 
+- Missão 6: Estabelecendo Rotas Clandestinas - Selecting Breakpoints 
+- Missão 7: A Voz da Resistência - Huffman Coding 
 
 ## Screenshots
+
 
 
 ## Link do vídeo
