@@ -1,5 +1,10 @@
 # Aliança Rebelde - Operações Críticas: Manual de Instalação e Execução
 
+
+## Alternativa:
+
+É possível baixar o jogo ao fazer um git clone do repositório na sua máquina e baixar a pasta com os códgos [Alianca_Rebelde](https://github.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/tree/main/Alianca_Rebelde) 
+
 ## Instalação 
 
 #### 1. Pré-requisitos
@@ -118,3 +123,5 @@ Isso deve iniciar a janela do jogo "Aliança Rebelde - Operações Críticas".
 
 * **Problemas de Estilo/Cores:**
     * A aparência dos widgets `ttk` pode variar um pouco dependendo do seu sistema operacional e tema ativo. As configurações de estilo no jogo tentam criar uma experiência consistente, mas podem haver pequenas diferenças visuais.
+
+
