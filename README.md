@@ -1,5 +1,5 @@
-<h2 align="center"># Star Wars: Aliança Rebelde - Operações Críticas</h2>
-## Algoritmos Ambiciosos podem salvar a rebelião!
+<h2 align="center">Star Wars: Aliança Rebelde - Operações Críticas</h2>
+<h2 align="center">Algoritmos Ambiciosos podem salvar a rebelião!</h2>
 
 "Aliança Rebelde - Operações Críticas" é um jogo de estratégia e puzzle narrativo, onde o jogador assume o papel de um(a) Coordenador(a) de Operações da Aliança Rebelde. Com uma atmosfera inspirada na seriedade e tensão de narrativas como "Andor" e "Rogue One", o jogo desafia o jogador a aplicar algoritmos gananciosos para resolver problemas complexos em diversas missões. Cada nível é uma etapa crucial na campanha contra o Império, exigindo lógica e precisão.
 
