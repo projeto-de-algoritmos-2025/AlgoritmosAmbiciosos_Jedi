@@ -1,28 +1,64 @@
+# missoes/missao2.py
 import tkinter as tk
 from tkinter import ttk, messagebox, font as tkFont
-import random # Para gerar valores aleatórios
+import random 
 from algoritmos.coin_changing import calcular_troco
 
 class Missao2:
     def __init__(self, root, game_manager, content_frame_para_missao):
         self.root = root
         self.game_manager = game_manager
-        self.base_content_frame = content_frame_para_missao
+        self.base_content_frame = content_frame_para_missao 
+
+        # Cores do tema escuro herdadas/definidas para esta missão
+        try:
+            self.cor_fundo_base = self.game_manager.bg_color_dark
+            self.cor_texto_principal = self.game_manager.fg_color_light
+            self.cor_texto_titulo_missao = self.game_manager.title_color_accent
+            self.cor_fundo_tabela_cedulas = "#002b4d"  # Azul escuro para o fundo da "tabela" de cédulas
+            self.cor_texto_label_cedula = "#FFFFE0"   # Amarelo claro para o texto "Cédulas de X:"
+            self.cor_texto_spinbox = self.game_manager.fg_color_light # Texto dentro do Spinbox
+            self.cor_fundo_spinbox_field = self.game_manager.bg_color_dark # Fundo do campo de entrada do Spinbox
+            self.cor_texto_status_ok = "lime green"
+            self.cor_texto_status_erro = "red"
+        except AttributeError:
+            print("AVISO Missao2: Cores do tema escuro não encontradas no GameManager. Usando fallbacks.")
+            self.cor_fundo_base = "black"
+            self.cor_texto_principal = "white"
+            self.cor_texto_titulo_missao = "orangered"
+            self.cor_fundo_tabela_cedulas = "#002244"
+            self.cor_texto_label_cedula = "yellow"
+            self.cor_texto_spinbox = "white"
+            self.cor_fundo_spinbox_field = "black"
+            self.cor_texto_status_ok = "lime green"
+            self.cor_texto_status_erro = "red"
 
         # Fontes
-        self.narrative_font = self.game_manager.narrative_font
-        self.button_font = self.game_manager.button_font
-        self.item_font = tkFont.Font(family="Arial", size=10)
-        self.header_font = self.game_manager.header_font
-        self.status_label_font = self.game_manager.small_bold_font
+        try:
+            self.narrative_font_obj = self.game_manager.narrative_font_obj
+            self.button_font_obj = self.game_manager.button_font_obj
+            self.header_font_obj = self.game_manager.header_font_obj
+            self.status_label_font_obj = self.game_manager.small_bold_font_obj
+            default_family_for_local_fonts = "Arial" 
+            if hasattr(self.game_manager, 'default_font_family'):
+                default_family_for_local_fonts = self.game_manager.default_font_family
+            self.item_font_obj = tkFont.Font(family=default_family_for_local_fonts, size=10)
+        except AttributeError:
+            print("AVISO Missao2: Falha ao carregar fontes _obj do GameManager. Usando fallbacks.")
+            default_family_fallback = "Arial"
+            self.narrative_font_obj = tkFont.Font(family=default_family_fallback, size=12)
+            self.button_font_obj = tkFont.Font(family=default_family_fallback, size=11, weight="bold")
+            self.header_font_obj = tkFont.Font(family=default_family_fallback, size=20, weight="bold")
+            self.status_label_font_obj = tkFont.Font(family=default_family_fallback, size=10, weight="bold")
+            self.item_font_obj = tkFont.Font(family=default_family_fallback, size=10)
         
-        # Dados da Missão Coin Changing
-        self.valor_a_pagar_informante = 0 # Será definido dinamicamente
-        self.denominacoes_imperiais = [100, 50, 25, 10, 5, 1] # Créditos Imperiais
-        
+        self.valor_a_pagar_informante = 0 
+        self.denominacoes_imperiais = [100, 50, 25, 10, 5, 1] 
         self.player_cedulas_usadas = {} 
-        self.entry_widgets_cedulas = {}
-        self.btn_confirmar_pagamento = None # Referência para o botão
+        self.entry_widgets_cedulas = {} 
+        self.spinbox_widgets = {}
+        self.btn_confirmar_pagamento = None 
+        self.btn_dica_m2 = None
 
     def _clear_mission_frame(self):
         if self.base_content_frame and self.base_content_frame.winfo_exists():
@@ -34,68 +70,98 @@ class Missao2:
 
     def iniciar_missao_contexto(self):
         self._clear_mission_frame()
-        
-        # GERA O VALOR ALEATÓRIO PARA ESTA TENTATIVA DA MISSÃO
         self.valor_a_pagar_informante = random.randint(100, 1000) 
 
-        ttk.Label(self.base_content_frame, text="MISSÃO 2: Pagamento Discreto", font=self.header_font).pack(pady=10)
+        title_label = tk.Label(self.base_content_frame, text="MISSÃO 2: Pagamento Discreto", 
+                               font=self.header_font_obj, 
+                               fg=self.cor_texto_titulo_missao, 
+                               bg=self.cor_fundo_base, pady=5)
+        title_label.pack(pady=(0,15), fill=tk.X, padx=20)
 
-        context_text = (
+        context_text_val = (
             "Fulcrum lhe informou sobre o pagamento necessário ao informante que garantiu a rota segura para Atravis.\n"
             f"Desta vez, o valor negociado com o contato foi de {self.valor_a_pagar_informante} créditos imperiais. "
             "Este informante é notoriamente paranoico e opera em áreas sob intensa vigilância imperial. Um volume grande ou incomum de cédulas pode levantar suspeitas fatais.\n\n"
             "Sua tarefa: efetuar o pagamento exato usando o MENOR NÚMERO POSSÍVEL de cédulas de crédito imperial padrão para garantir a discrição."
         )
         
-        text_widget = tk.Text(self.base_content_frame, wrap=tk.WORD, height=9, relief=tk.FLAT, 
-                              background=self.root.cget('bg'), font=self.narrative_font, padx=10, pady=10)
-        text_widget.insert(tk.END, context_text)
+        text_context_container = tk.Frame(self.base_content_frame, bg=self.cor_fundo_base)
+        text_context_container.pack(pady=10, padx=30, fill=tk.X)
+        text_widget = tk.Text(text_context_container, wrap=tk.WORD, height=9, relief=tk.FLAT, 
+                              font=self.narrative_font_obj, padx=10, pady=10,
+                              borderwidth=0, highlightthickness=0,
+                              background=self.cor_fundo_base,      
+                              foreground=self.cor_texto_principal, 
+                              insertbackground=self.cor_texto_principal)
+        text_widget.insert(tk.END, context_text_val)
         text_widget.config(state=tk.DISABLED)
-        text_widget.pack(pady=15, padx=10, fill=tk.X)
+        text_widget.pack(fill=tk.X, expand=True)
 
-        ttk.Button(self.base_content_frame, text="Analisar Denominações e Preparar Pagamento...",
-                   command=self.iniciar_coin_changing_interativo, style="Accent.TButton").pack(pady=20)
+        button_container = ttk.Frame(self.base_content_frame, style="Black.TFrame")
+        button_container.pack(pady=20)
+        ttk.Button(button_container, text="Analisar Denominações e Preparar Pagamento...",
+                   command=self.iniciar_coin_changing_interativo, 
+                   style="Accent.Dark.TButton").pack()
 
     def iniciar_coin_changing_interativo(self):
         self._clear_mission_frame()
         self.player_cedulas_usadas.clear()
         self.entry_widgets_cedulas.clear()
+        self.spinbox_widgets.clear()
 
-        top_frame = ttk.Frame(self.base_content_frame)
+        top_frame = ttk.Frame(self.base_content_frame, style="Black.TFrame")
         top_frame.pack(fill=tk.X, pady=(10,5), padx=10)
-        ttk.Label(top_frame, text="Pagamento ao Informante (Minimizar Cédulas)", font=self.button_font).pack(side=tk.LEFT, padx=(0,10))
+        ttk.Label(top_frame, text="Pagamento ao Informante (Minimizar Cédulas)", 
+                  font=self.button_font_obj, style="WhiteText.TLabel").pack(side=tk.LEFT, padx=(0,10))
         
-        self.status_pagamento_label = ttk.Label(top_frame, text="", font=self.status_label_font)
+        self.status_pagamento_label = ttk.Label(top_frame, text="", 
+                                                font=self.status_label_font_obj, style="WhiteText.TLabel")
         self.status_pagamento_label.pack(side=tk.RIGHT)
         
-        ttk.Label(self.base_content_frame, text=f"Valor Total a Pagar: {self.valor_a_pagar_informante} créditos", font=self.narrative_font).pack(pady=10)
+        tk.Label(self.base_content_frame, text=f"Valor Total a Pagar: {self.valor_a_pagar_informante} créditos", 
+                 font=self.narrative_font_obj, bg=self.cor_fundo_base, fg=self.cor_texto_principal).pack(pady=10)
 
-        cedulas_frame = ttk.Frame(self.base_content_frame, padding=10)
-        cedulas_frame.pack(pady=10)
+        # Frame para a "tabela" de cédulas, com fundo azul escuro
+        cedulas_container_frame = tk.Frame(self.base_content_frame, bg=self.cor_fundo_tabela_cedulas, padx=15, pady=15)
+        cedulas_container_frame.pack(pady=10)
 
-        ttk.Label(cedulas_frame, text="Denominações Disponíveis (Créditos Imperiais):", font=self.status_label_font).grid(row=0, column=0, columnspan=2, pady=(0,10), sticky="w")
+        # Título dentro da tabela de cédulas
+        tk.Label(cedulas_container_frame, text="Denominações Disponíveis (Créditos Imperiais):", 
+                 font=self.status_label_font_obj, 
+                 bg=self.cor_fundo_tabela_cedulas, fg=self.cor_texto_principal).grid(row=0, column=0, columnspan=2, pady=(0,10), sticky="w")
 
         row_num = 1
         for den in sorted(self.denominacoes_imperiais, reverse=True):
-            ttk.Label(cedulas_frame, text=f"Cédulas de {den}:", font=self.item_font).grid(row=row_num, column=0, padx=5, pady=5, sticky="e")
+            # Labels das denominações com texto amarelo/azul claro sobre o fundo azul da tabela
+            tk.Label(cedulas_container_frame, text=f"Cédulas de {den}:", 
+                     font=self.item_font_obj, 
+                     bg=self.cor_fundo_tabela_cedulas,    # Fundo da tabela
+                     fg=self.cor_texto_label_cedula).grid(row=row_num, column=0, padx=5, pady=3, sticky="e") # Texto amarelo/azul
             
             spin_var = tk.StringVar(value="0")
             max_spin_val = self.valor_a_pagar_informante // den if den > 0 else 0
-            spinbox = ttk.Spinbox(cedulas_frame, from_=0, to=max_spin_val + 5, width=5, textvariable=spin_var, command=self._atualizar_status_pagamento, wrap=False) # wrap=False pode ser melhor
-            spinbox.grid(row=row_num, column=1, padx=5, pady=5, sticky="w")
-            self.entry_widgets_cedulas[den] = spin_var
+            
+            # ttk.Spinbox - o estilo Dark.TSpinbox definido no GameManager deve ajudar
+            spinbox = ttk.Spinbox(cedulas_container_frame, from_=0, to=max_spin_val + 10, width=7, # Aumentado um pouco o to e width
+                                  textvariable=spin_var, command=self._atualizar_status_pagamento, 
+                                  wrap=False, font=self.item_font_obj, style="Dark.TSpinbox")
+            # O Spinbox em si pode não pegar o bg do frame pai (cedulas_container_frame)
+            # Mas o fieldbackground do estilo "Dark.TSpinbox" deve ser preto e texto branco.
+            spinbox.grid(row=row_num, column=1, padx=5, pady=3, sticky="w")
+            self.entry_widgets_cedulas[den] = spin_var 
+            self.spinbox_widgets[den] = spinbox
             
             row_num += 1
         
         self._atualizar_status_pagamento() 
 
-        action_frame = ttk.Frame(self.base_content_frame)
+        action_frame = ttk.Frame(self.base_content_frame, style="Black.TFrame")
         action_frame.pack(fill=tk.X, pady=20, padx=10)
         
-        self.btn_dica_m2 = ttk.Button(action_frame, text="Pedir Dica (Estratégia de Pagamento)", command=self.mostrar_dica_coin_changing)
+        self.btn_dica_m2 = ttk.Button(action_frame, text="Pedir Dica (Estratégia)", command=self.mostrar_dica_coin_changing, style="Dark.TButton")
         self.btn_dica_m2.pack(side=tk.LEFT, padx=(0,10))
         
-        self.btn_confirmar_pagamento = ttk.Button(action_frame, text="Confirmar e Realizar Pagamento", command=self.avaliar_pagamento_jogador, style="Accent.TButton")
+        self.btn_confirmar_pagamento = ttk.Button(action_frame, text="Confirmar e Realizar Pagamento", command=self.avaliar_pagamento_jogador, style="Accent.Dark.TButton")
         self.btn_confirmar_pagamento.pack(side=tk.RIGHT)
 
 
@@ -110,26 +176,21 @@ class Missao2:
                 except ValueError:
                     quantidade = 0 
                     str_var.set("0") 
-
                 if quantidade < 0: 
                     str_var.set("0")
                     quantidade = 0
-                
-                if quantidade > 0: # Só adiciona ao dicionário se a quantidade for > 0
+                if quantidade > 0: 
                     temp_cedulas_usadas[den] = quantidade
-
-                total_pago_pelo_jogador += den * quantidade # Soma ao total pago mesmo se for 0 para o display
+                total_pago_pelo_jogador += den * quantidade 
                 total_cedulas_usadas += quantidade 
-            
             self.player_cedulas_usadas = temp_cedulas_usadas 
-
         except Exception as e: 
             print(f"Erro em _atualizar_status_pagamento: {e}")
             pass 
 
-        cor_valor = "red" if total_pago_pelo_jogador != self.valor_a_pagar_informante else "dark green"
-        status_texto = (f"Total Montado para Pagamento: {total_pago_pelo_jogador} créditos\n"
-                        f"Número de Cédulas Usadas: {total_cedulas_usadas}")
+        cor_valor = self.cor_texto_status_erro if total_pago_pelo_jogador != self.valor_a_pagar_informante else self.cor_texto_status_ok
+        status_texto = (f"Total Montado: {total_pago_pelo_jogador} créditos | "
+                        f"Cédulas Usadas: {total_cedulas_usadas}")
         
         if hasattr(self, 'status_pagamento_label') and self.status_pagamento_label and self.status_pagamento_label.winfo_exists():
             self.status_pagamento_label.config(text=status_texto, foreground=cor_valor)
@@ -139,14 +200,19 @@ class Missao2:
             self.btn_confirmar_pagamento.config(state=tk.DISABLED)
         if hasattr(self, 'btn_dica_m2') and self.btn_dica_m2 and self.btn_dica_m2.winfo_exists():
             self.btn_dica_m2.config(state=tk.DISABLED)
-        for str_var_key in self.entry_widgets_cedulas:
-            pass 
-
+        for den_key in self.spinbox_widgets:
+            if self.spinbox_widgets[den_key].winfo_exists():
+                self.spinbox_widgets[den_key].config(state=tk.DISABLED)
 
     def mostrar_dica_coin_changing(self):
         messagebox.showinfo("Dica da Rebelião", 
                             "Comandante, para minimizar o número de cédulas e evitar atenção, comece sempre tentando usar as cédulas de MAIOR VALOR disponíveis que não excedam o montante restante a pagar.\n\n"
                             "Pague o máximo possível com elas antes de passar para a próxima denominação menor. Essa é a essência da estratégia gulosa para este problema.")
+        if self.btn_dica_m2 and self.btn_dica_m2.winfo_exists():
+            self.btn_dica_m2.config(state=tk.DISABLED)
+
+    # missoes/missao2.py (substitua a função avaliar_pagamento_jogador existente)
+# ... (imports e o resto da classe Missao2 como antes) ...
 
     def avaliar_pagamento_jogador(self):
         self._atualizar_status_pagamento() 
@@ -233,4 +299,5 @@ class Missao2:
             self.game_manager.mission_failed_options(self, falha_msg1, falha_msg2_criativa)
 
     def retry_mission(self):
+        print("Missao2: retry_mission chamada.")
         self.game_manager.set_game_state("START_MISSION_2")
