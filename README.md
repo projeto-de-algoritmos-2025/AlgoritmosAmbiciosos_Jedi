@@ -37,11 +37,196 @@ Para mais detalhes sobre a história, os personagens, os algoritmos abordados e 
 - Missão 6: Estabelecendo Rotas Clandestinas - Selecting Breakpoints 
 - Missão 7: A Voz da Resistência - Huffman Coding 
 
+## Link do vídeo
+
+
 ## Screenshots
 
+Abaixo estão os screenshots do projeto
 
 
-## Link do vídeo
+<div align="center">
+    Figura 2: Código
+    <br>
+    <img src="https://raw.githubusercontent.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/refs/heads/main/Imagens/Alianca_Rebelde01.png" width="800">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 3: Apresentação da História
+    <br>
+    <img src="https://raw.githubusercontent.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/refs/heads/main/Imagens/Alianca_Rebelde02.png" width="500">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 4: Contado com Fulcrum
+    <br>
+    <img src="https://raw.githubusercontent.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/refs/heads/main/Imagens/Alianca_Rebelde03.png" width="500">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
+<div align="center">
+    Figura 5: Missão 1 - Knapsack fracionado
+    <br>
+    <img src="https://raw.githubusercontent.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/refs/heads/main/Imagens/Alianca_Rebelde04.png" width="500">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
+<div align="center">
+    Figura 6: Missão 2 - Coin Changing
+    <br>
+    <img src="https://raw.githubusercontent.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/refs/heads/main/Imagens/Alianca_Rebelde05.png" width="500">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
+<div align="center">
+    Figura 1: modelagem do Padrão Observer
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
+<div align="center">
+    Figura 1: modelagem do Padrão Observer
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
+
+<div align="center">
+    Figura 1: modelagem do Padrão Observer
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
+<div align="center">
+    Figura 1: modelagem do Padrão Observer
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
+<div align="center">
+    Figura 1: modelagem do Padrão Observer
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 1: modelagem do Padrão Observer
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 1: modelagem do Padrão Observer
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 1: modelagem do Padrão Observer
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 1: modelagem do Padrão Observer
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 1: modelagem do Padrão Observer
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
+<div align="center">
+    Figura 1: modelagem do Padrão Observer
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 1: modelagem do Padrão Observer
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+<div align="center">
+    Figura 1: modelagem do Padrão Observer
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
+<div align="center">
+    Figura 1: modelagem do Padrão Observer
+    <br>
+    <img src="" width="1000">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
 
 
 ## Instalação 
