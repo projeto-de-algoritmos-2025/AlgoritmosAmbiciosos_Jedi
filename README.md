@@ -48,7 +48,7 @@ Para mais detalhes sobre a história, os personagens, os algoritmos abordados e 
 
 ### Para mais detalhes:
 
-Para mais detalhes e passo a passo da execução, acesse a documentação em [Instalação e Ececução](/Instalacao_Execucao.md)
+Para mais detalhes e passo a passo da execução, acesse a documentação em [Aliança Rebelde - Operações Críticas: Manual de Instalação e Execução](/Instalacao_Execucao.md)
 
 #### 1. Pré-requisitos
 
