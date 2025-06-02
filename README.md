@@ -94,30 +94,9 @@ Abaixo estão os screenshots do projeto
 
 
 <div align="center">
-    Figura 1: modelagem do Padrão Observer
+    Figura 7: Missão 3 - Interval Scheduling - Parte 1
     <br>
-    <img src="" width="1000">
-    <br>
-    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
-    <br>
-</div>
-
-
-<div align="center">
-    Figura 1: modelagem do Padrão Observer
-    <br>
-    <img src="" width="1000">
-    <br>
-    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
-    <br>
-</div>
-
-
-
-<div align="center">
-    Figura 1: modelagem do Padrão Observer
-    <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/refs/heads/main/Imagens/Alianca_Rebelde06.png" width="500">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -125,9 +104,20 @@ Abaixo estão os screenshots do projeto
 
 
 <div align="center">
-    Figura 1: modelagem do Padrão Observer
+    Figura 8: Missão 3 - Interval Scheduling - Parte 2
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/refs/heads/main/Imagens/Alianca_Rebelde07.png" width="500">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
+
+
+
+<div align="center">
+    Figura 9: Missão 4 - Scheduling to Minimize Lateness - Parte 1
+    <br>
+    <img src="https://raw.githubusercontent.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/refs/heads/main/Imagens/Alianca_Rebelde08.png" width="500">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -135,54 +125,9 @@ Abaixo estão os screenshots do projeto
 
 
 <div align="center">
-    Figura 1: modelagem do Padrão Observer
+    Figura 10: Missão 4 - Scheduling to Minimize Lateness - Parte 2
     <br>
-    <img src="" width="1000">
-    <br>
-    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
-    <br>
-</div>
-
-<div align="center">
-    Figura 1: modelagem do Padrão Observer
-    <br>
-    <img src="" width="1000">
-    <br>
-    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
-    <br>
-</div>
-
-<div align="center">
-    Figura 1: modelagem do Padrão Observer
-    <br>
-    <img src="" width="1000">
-    <br>
-    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
-    <br>
-</div>
-
-<div align="center">
-    Figura 1: modelagem do Padrão Observer
-    <br>
-    <img src="" width="1000">
-    <br>
-    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
-    <br>
-</div>
-
-<div align="center">
-    Figura 1: modelagem do Padrão Observer
-    <br>
-    <img src="" width="1000">
-    <br>
-    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
-    <br>
-</div>
-
-<div align="center">
-    Figura 1: modelagem do Padrão Observer
-    <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/refs/heads/main/Imagens/Alianca_Rebelde09.png" width="500">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
@@ -190,44 +135,40 @@ Abaixo estão os screenshots do projeto
 
 
 <div align="center">
-    Figura 1: modelagem do Padrão Observer
+    Figura 11: Missão 5 - Interval Partitioning 
     <br>
-    <img src="" width="1000">
-    <br>
-    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
-    <br>
-</div>
-
-<div align="center">
-    Figura 1: modelagem do Padrão Observer
-    <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/refs/heads/main/Imagens/Alianca_Rebelde10.png" width="500">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
 
 <div align="center">
-    Figura 1: modelagem do Padrão Observer
+    Figura 12: Missão 6 - Selecting Breakpoints
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/refs/heads/main/Imagens/Alianca_Rebelde11.png" width="500">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
-
 
 <div align="center">
-    Figura 1: modelagem do Padrão Observer
+    Figura 13: Missão 7 - Huffman Coding - Parte 1
     <br>
-    <img src="" width="1000">
+    <img src="https://raw.githubusercontent.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/refs/heads/main/Imagens/Alianca_Rebelde12.png" width="500">
     <br>
     <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
     <br>
 </div>
 
-
-
+<div align="center">
+    Figura 13: Missão 7 - Huffman Coding - Parte 2
+    <br>
+    <img src="https://raw.githubusercontent.com/projeto-de-algoritmos-2025/Alianca_Rebelde-Algoritmos_Ambiciosos/refs/heads/main/Imagens/Alianca_Rebelde13.png" width="500">
+    <br>
+    <b>Autora:</b> <a href="https://github.com/SkywalkerSupreme">Larissa Stéfane</a>.
+    <br>
+</div>
 
 ## Instalação 
 
