@@ -13,7 +13,12 @@
 | 21/1029497  | Mylena Angélica Silva Farias  |
 
 ## Sobre 
-Este repositório apresenta o projeto desenvolvido pela equipe Jedi para a disciplina de Projeto de Algoritmos sobre o tema de algoritmos ambiciosos (greedy)
+
+Esse repositório apresenta o jogo Aliança Rebelde - Operações Críticas, uma aventura textual interativa onde você assume o papel de um(a) estrategista crucial para a Aliança Rebelde. Sua missão é aplicar sua inteligência e conhecimento de algoritmos gulosos para superar desafios táticos e logísticos impostos pelo Império Galáctico.
+
+Para mais detalhes sobre a história, os personagens, os algoritmos abordados e a mecânica de jogo, acesse a documentação em [descrição](/Descricao.md)
+
+### Missões do Jogo
 
 
 
